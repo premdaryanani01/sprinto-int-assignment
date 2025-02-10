@@ -321,22 +321,27 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_swiper_script');
 function enqueue_modal_scripts() {
   ob_start();?>
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Open Modal
     document.querySelectorAll(".openModal").forEach(button => {
-        button.addEventListener("click", function() {
-            document.querySelector(".modalBox").classList.remove("hidden");
-            document.querySelector(".modalOverlay").classList.remove("hidden");
+        button.addEventListener("click", function () {
+            document.querySelector(".modal").classList.remove("hidden");
+            document.querySelector(".modal-overlay").classList.remove("hidden");
         });
     });
 
-    document.querySelector(".closeModal").addEventListener("click", function() {
-        document.querySelector(".modalBox").classList.add("hidden");
-        document.querySelector(".modalOverlay").classList.add("hidden");
+    // Close Modal when clicking Close Button
+    document.querySelector(".closeModal").addEventListener("click", function () {
+        document.querySelector(".modal").classList.add("hidden");
+        document.querySelector(".modal-overlay").classList.add("hidden");
     });
 
-    document.querySelector(".modal-overlay").addEventListener("click", function() {
+    // Close Modal when clicking Outside Overlay
+    document.querySelector(".modal-overlay").addEventListener("click", function () {
         document.querySelector(".modal").classList.add("hidden");
-        document.querySelector(".modalOverlay").classList.add("hidden");
+        document.querySelector(".modal-overlay").classList.add("hidden");
     });
+});
 </script> 
 <?php ob_get_clean(); 
 }
