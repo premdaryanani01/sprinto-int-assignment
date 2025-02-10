@@ -323,19 +323,19 @@ function enqueue_modal_scripts() {
   <script>
     document.querySelectorAll(".openModal").forEach(button => {
         button.addEventListener("click", function() {
-            document.querySelector(".modal").classList.remove("hidden");
-            document.querySelector(".modal-overlay").classList.remove("hidden");
+            document.querySelector(".modalBox").classList.remove("hidden");
+            document.querySelector(".modalOverlay").classList.remove("hidden");
         });
     });
 
     document.querySelector(".closeModal").addEventListener("click", function() {
-        document.querySelector(".modal").classList.add("hidden");
-        document.querySelector(".modal-overlay").classList.add("hidden");
+        document.querySelector(".modalBox").classList.add("hidden");
+        document.querySelector(".modalOverlay").classList.add("hidden");
     });
 
     document.querySelector(".modal-overlay").addEventListener("click", function() {
         document.querySelector(".modal").classList.add("hidden");
-        document.querySelector(".modal-overlay").classList.add("hidden");
+        document.querySelector(".modalOverlay").classList.add("hidden");
     });
 </script> 
 <?php ob_get_clean(); 
