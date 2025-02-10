@@ -1,0 +1,24 @@
+{
+  "name": "sprintoptimize",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx sass --watch assets/css/scss/style.scss:assets/css/style.css & tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "sass": "^1.84.0",
+    "tailwindcss": "^4.0.4",
+    "tailwindcss-cli": "^0.1.2"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.7",
+    "swiper": "^11.2.2"
+  }
+}
