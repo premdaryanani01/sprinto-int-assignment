@@ -1,5 +1,5 @@
-@import 'variables';  // Custom variables
-@import 'global';     // Global styles
+@use 'variables' as *;  
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
@@ -208,3 +208,8 @@ body footer{
     }
   }
 }
+.bg-black { @apply bg-black; }
+.bg-opacity-50 { @apply bg-opacity-50; }
+.fixed { @apply fixed; }
+.inset-0 { @apply inset-0; }
+.hidden { @apply hidden; }
