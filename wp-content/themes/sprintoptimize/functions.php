@@ -317,3 +317,4 @@ function enqueue_custom_swiper_script() {
   );
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_swiper_script');
+add_filter('wpcf7_skip_mail', '__return_true');
