@@ -317,3 +317,23 @@ function enqueue_custom_swiper_script() {
   );
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_swiper_script');
+
+function enqueue_modal_scripts() {
+  ob_start();?>
+  <script>
+document.getElementById("openModal").addEventListener("click", function() {
+    document.getElementById("modalOverlay").classList.remove("hidden");
+    document.getElementById("modalBox").classList.remove("hidden");
+});
+document.getElementById("closeModal").addEventListener("click", function() {
+    document.getElementById("modalOverlay").classList.add("hidden");
+    document.getElementById("modalBox").classList.add("hidden");
+});
+document.getElementById("modalOverlay").addEventListener("click", function() {
+    document.getElementById("modalOverlay").classList.add("hidden");
+    document.getElementById("modalBox").classList.add("hidden");
+});
+</script> 
+<?php ob_get_clean(); 
+}
+add_action('wp_enqueue_scripts', 'enqueue_modal_scripts');
