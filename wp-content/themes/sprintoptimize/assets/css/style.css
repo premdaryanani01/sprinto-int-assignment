@@ -208,10 +208,6 @@ body footer ul li a {
   @apply bg-black;
 }
 
-.bg-opacity-50 {
-  @apply bg-opacity-50;
-}
-
 .fixed {
   @apply fixed;
 }
@@ -222,6 +218,10 @@ body footer ul li a {
 
 .hidden {
   @apply hidden;
+}
+
+.bg-opacity-50 {
+  opacity: 0.75;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -209,7 +209,10 @@ body footer{
   }
 }
 .bg-black { @apply bg-black; }
-.bg-opacity-50 { @apply bg-opacity-50; }
 .fixed { @apply fixed; }
 .inset-0 { @apply inset-0; }
 .hidden { @apply hidden; }
+
+.bg-opacity-50 { 
+  opacity: 0.75;
+}
