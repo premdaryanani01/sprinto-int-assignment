@@ -323,40 +323,51 @@ function enqueue_modal_scripts() {
   <script>
     document.addEventListener("DOMContentLoaded", function () {
     function setupModalEvents() {
-        document.querySelectorAll(".openModal").forEach(button => {
+        let modalButtons = document.querySelectorAll(".openModal");
+        let modal = document.querySelector(".modal");
+        let overlay = document.querySelector(".modal-overlay");
+        let closeModal = document.querySelector(".closeModal");
+
+        if (!modalButtons.length || !modal || !overlay || !closeModal) {
+            console.log("Modal elements not found yet.");
+            return;
+        }
+
+        modalButtons.forEach(button => {
             button.addEventListener("click", function () {
-                document.querySelector(".modal").classList.remove("hidden");
-                document.querySelector(".modal-overlay").classList.remove("hidden");
+                modal.classList.remove("hidden");
+                overlay.classList.remove("hidden");
             });
         });
 
-        document.querySelector(".closeModal").addEventListener("click", function () {
-            document.querySelector(".modal").classList.add("hidden");
-            document.querySelector(".modal-overlay").classList.add("hidden");
+        closeModal.addEventListener("click", function () {
+            modal.classList.add("hidden");
+            overlay.classList.add("hidden");
         });
 
-        document.querySelector(".modal-overlay").addEventListener("click", function () {
-            document.querySelector(".modal").classList.add("hidden");
-            document.querySelector(".modal-overlay").classList.add("hidden");
+        overlay.addEventListener("click", function () {
+            modal.classList.add("hidden");
+            overlay.classList.add("hidden");
         });
     }
 
-    // Run setup on page load
-    setupModalEvents();
+    setupModalEvents(); // Run when DOM loads
 
-    // Run setup again when Elementor dynamically loads content
+    // Run when Elementor dynamically loads content
+    document.addEventListener('elementor/frontend/init', function () {
+        setupModalEvents();
+    });
+
     window.addEventListener('elementor/popup/show', function () {
         setupModalEvents();
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        setupModalEvents();
-    });
-
-    document.addEventListener('elementor/frontend/init', function () {
+    // Re-run script when Elementor updates the page content
+    document.addEventListener("click", function () {
         setupModalEvents();
     });
 });
+
 </script> 
 <?php ob_get_clean(); 
 }
