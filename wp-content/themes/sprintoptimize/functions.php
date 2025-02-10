@@ -322,24 +322,39 @@ function enqueue_modal_scripts() {
   ob_start();?>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-    // Open Modal
-    document.querySelectorAll(".openModal").forEach(button => {
-        button.addEventListener("click", function () {
-            document.querySelector(".modal").classList.remove("hidden");
-            document.querySelector(".modal-overlay").classList.remove("hidden");
+    function setupModalEvents() {
+        document.querySelectorAll(".openModal").forEach(button => {
+            button.addEventListener("click", function () {
+                document.querySelector(".modal").classList.remove("hidden");
+                document.querySelector(".modal-overlay").classList.remove("hidden");
+            });
         });
+
+        document.querySelector(".closeModal").addEventListener("click", function () {
+            document.querySelector(".modal").classList.add("hidden");
+            document.querySelector(".modal-overlay").classList.add("hidden");
+        });
+
+        document.querySelector(".modal-overlay").addEventListener("click", function () {
+            document.querySelector(".modal").classList.add("hidden");
+            document.querySelector(".modal-overlay").classList.add("hidden");
+        });
+    }
+
+    // Run setup on page load
+    setupModalEvents();
+
+    // Run setup again when Elementor dynamically loads content
+    window.addEventListener('elementor/popup/show', function () {
+        setupModalEvents();
     });
 
-    // Close Modal when clicking Close Button
-    document.querySelector(".closeModal").addEventListener("click", function () {
-        document.querySelector(".modal").classList.add("hidden");
-        document.querySelector(".modal-overlay").classList.add("hidden");
+    document.addEventListener('DOMContentLoaded', function () {
+        setupModalEvents();
     });
 
-    // Close Modal when clicking Outside Overlay
-    document.querySelector(".modal-overlay").addEventListener("click", function () {
-        document.querySelector(".modal").classList.add("hidden");
-        document.querySelector(".modal-overlay").classList.add("hidden");
+    document.addEventListener('elementor/frontend/init', function () {
+        setupModalEvents();
     });
 });
 </script> 
