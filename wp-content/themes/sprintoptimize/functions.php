@@ -52,10 +52,8 @@ function sprintoptimize_audit_chart() {
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      if (typeof Chart !== 'undefined') { // Ensure Chart.js is loaded
+      if (typeof Chart !== 'undefined') { 
         const ctx = document.getElementById('auditChart').getContext('2d');
-
-        // Create a diagonal gradient (matching 243.09° as closely as possible)
         const gradient = ctx.createLinearGradient(250, 0, 0, 250); 
           gradient.addColorStop(0.05, '#032661'); // Dark Blue
           gradient.addColorStop(0.94, '#0B131F'); // Deep Navy
