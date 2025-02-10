@@ -216,3 +216,16 @@ body footer{
 .bg-opacity-50 { 
   opacity: 0.75;
 }
+
+#modalBox,#modalOverlay{
+  z-index: 900;
+}
+form.wpcf7-form input {
+  border: 1px solid rgb(131, 131, 131);
+  padding: .2rem .5rem;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
