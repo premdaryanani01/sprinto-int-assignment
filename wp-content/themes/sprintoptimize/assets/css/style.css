@@ -254,9 +254,6 @@ form.wpcf7-form input {
   -o-border-radius: 0.4rem;
 }
 
-body .cardInteractive {
-  background: linear-gradient(243.09deg, #032661 15%, #0a111b 85%);
-}
 body .cardInteractive .interactiveCardContainer .elementor-widget-container {
   display: flex;
   flex-direction: column;
