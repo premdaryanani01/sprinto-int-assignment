@@ -197,7 +197,7 @@ function sprintoptimize_testimonials() {
             <div class="testimonial_container">
                 
                 <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="" class="thumb">
+                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" class="thumb">
                   <p>"SprintOptimize reduced our compliance workload by 60%! Highly recommend."</p>
                 </div>
                 <div class="bottom">
@@ -205,14 +205,14 @@ function sprintoptimize_testimonials() {
                     — Priya Mehta,
                   </span><br> Compliance Director</cite>
                 </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="" >
+                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" >
             </div>    
           </div>
             <div class="swiper-slide">
             <div class="testimonial_container">
                 
                 <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg" alt="" class="thumb">
+                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.webp" alt="" class="thumb">
                   <p>"Audit preparation used to take weeks. Now, it’s done in days!"</p>
                 </div>
                 <div class="bottom">
@@ -220,14 +220,14 @@ function sprintoptimize_testimonials() {
                     — Rahul Desai,
                   </span><br> Risk Consultant</cite>
                 </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg" alt="" >
+                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.webp" alt="" >
             </div>    
           </div>
           <div class="swiper-slide">
             <div class="testimonial_container">
                 
                 <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/michael-austin-jgSAuqMmJUE-unsplash.jpg" alt="" class="thumb">
+                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/michael-austin-jgSAuqMmJUE-unsplash.webp" alt="" class="thumb">
                   <p>"Seamless integration with our security tools made compliance effortless."</p>
                 </div>
                 <div class="bottom">
@@ -235,14 +235,14 @@ function sprintoptimize_testimonials() {
                     — Amanda Roberts,
                   </span><br> IT Security Lead</cite>
                 </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/michael-austin-jgSAuqMmJUE-unsplash.jpg" alt="" >
+                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/michael-austin-jgSAuqMmJUE-unsplash.webp" alt="" >
             </div>    
           </div>
           <div class="swiper-slide">
             <div class="testimonial_container">
                 
                 <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="" class="thumb">
+                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" class="thumb">
                   <p>"SprintOptimize reduced our compliance workload by 60%! Highly recommend."</p>
                 </div>
                 <div class="bottom">
@@ -250,14 +250,14 @@ function sprintoptimize_testimonials() {
                     — Priya Mehta,
                   </span><br> Compliance Director</cite>
                 </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="" >
+                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" >
             </div>    
           </div>
             <div class="swiper-slide">
             <div class="testimonial_container">
                 
                 <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg" alt="" class="thumb">
+                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.webp" alt="" class="thumb">
                   <p>"Audit preparation used to take weeks. Now, it’s done in days!"</p>
                 </div>
                 <div class="bottom">
@@ -265,14 +265,14 @@ function sprintoptimize_testimonials() {
                     — Rahul Desai,
                   </span><br> Risk Consultant</cite>
                 </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg" alt="" >
+                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.webp" alt="" >
             </div>    
           </div>
           <div class="swiper-slide">
             <div class="testimonial_container">
                 
                 <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="" class="thumb">
+                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" class="thumb">
                   <p>"Seamless integration with our security tools made compliance effortless."</p>
                 </div>
                 <div class="bottom">
@@ -280,7 +280,7 @@ function sprintoptimize_testimonials() {
                     — Amanda Roberts,
                   </span><br> IT Security Lead</cite>
                 </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="" >
+                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" >
             </div>    
           </div>
         </div>
@@ -318,3 +318,12 @@ function enqueue_custom_swiper_script() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_swiper_script');
 add_filter('wpcf7_skip_mail', '__return_true');
+
+// range slider for calculator
+
+function enqueue_custom_scripts() {
+  wp_enqueue_style('rangeslider-css', get_template_directory_uri() .'/assets/css/range-slider.min.css');
+  wp_enqueue_script('rangeslider-js', get_template_directory_uri() .'/assets/js/range-slider.min.js', [], null, true);
+  wp_enqueue_script('custom-slider-init', get_template_directory_uri() . '/assets/js/custom-slider.js', [], null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');

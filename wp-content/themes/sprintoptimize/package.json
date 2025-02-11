@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "chart.js": "^4.4.7",
+    "rangeslider-pure": "^0.4.11",
     "swiper": "^11.2.2"
   }
 }
