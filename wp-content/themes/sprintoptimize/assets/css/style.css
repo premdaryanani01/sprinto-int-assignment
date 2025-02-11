@@ -54,6 +54,20 @@ ul#menu-main-menu a:hover {
   color: #f8f9fa;
 }
 
+.heroSection button.openModal {
+  background: #333;
+  transition: all 0.2s;
+  border: 2px solid #333;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.heroSection button.openModal:hover {
+  background: #fff;
+  color: #333;
+}
+
 body .card {
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -103,9 +117,11 @@ body .card .h4 {
   max-height: 15rem;
   min-height: 15rem;
 }
-#iconTextCardsContainer .cardIconText #savingsChart {
-  max-height: 15rem !important;
-  min-height: 15rem !important;
+@media screen and (min-width: 990px) {
+  #iconTextCardsContainer .cardIconText #savingsChart {
+    max-height: 15rem !important;
+    min-height: 15rem !important;
+  }
 }
 
 body .swiper-pagination-bullet-active {
