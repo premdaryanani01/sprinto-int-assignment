@@ -189,111 +189,54 @@ function sprintoptimize_savings_chart() {
 add_shortcode('savings_chart', 'sprintoptimize_savings_chart');
 
 function sprintoptimize_testimonials() {
+  $args = array(
+    'post_type'      => 'testimonial',
+    'posts_per_page' => 50,
+    'order'          => 'DESC'
+  );
+  $query = new WP_Query($args);
+  $total_posts = wp_count_posts('testimonial')->publish;
+  if ($total_posts >= 3):
   ob_start(); ?>
 
-<div class="swiper testimonial-slider">
+    <div class="swiper testimonial-slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-            <div class="testimonial_container">
-                
-                <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" class="thumb">
-                  <p>"SprintOptimize reduced our compliance workload by 60%! Highly recommend."</p>
-                </div>
-                <div class="bottom">
-                  <cite><span class="testimonialAuthor">
-                    — Priya Mehta,
-                  </span><br> Compliance Director</cite>
-                </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" >
-            </div>    
-          </div>
-            <div class="swiper-slide">
-            <div class="testimonial_container">
-                
-                <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.webp" alt="" class="thumb">
-                  <p>"Audit preparation used to take weeks. Now, it’s done in days!"</p>
-                </div>
-                <div class="bottom">
-                  <cite><span class="testimonialAuthor">
-                    — Rahul Desai,
-                  </span><br> Risk Consultant</cite>
-                </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.webp" alt="" >
-            </div>    
-          </div>
+
+          <?php
+              while ($query->have_posts()) : $query->the_post();
+              $name = get_post_meta(get_the_ID(), '_testimonial_name', true);
+              $designation = get_post_meta(get_the_ID(), '_testimonial_designation', true);
+              $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail');
+              $hires_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+
+            ?>      
           <div class="swiper-slide">
             <div class="testimonial_container">
-                
-                <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/michael-austin-jgSAuqMmJUE-unsplash.webp" alt="" class="thumb">
-                  <p>"Seamless integration with our security tools made compliance effortless."</p>
-                </div>
-                <div class="bottom">
-                  <cite><span class="testimonialAuthor">
-                    — Amanda Roberts,
-                  </span><br> IT Security Lead</cite>
-                </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/michael-austin-jgSAuqMmJUE-unsplash.webp" alt="" >
+              <div class="top">
+                <img src="<?=esc_url($thumbnail_url)?>" alt="<?php the_title_attribute(); ?>" class="thumb">
+                <!-- insert content -->
+                <?php the_content(); ?>
+              </div>
+              <div class="bottom">
+                <cite><span class="testimonialAuthor">
+                  <!-- insert name -->
+                  — <?php echo esc_html($name); ?>,
+                  <!-- insert designation -->
+                </span><br><?php echo esc_html($designation); ?></cite>
+              </div>
+              <img class="background" src="<?=esc_url($hires_url)?>" alt="<?php the_title_attribute(); ?>" >
             </div>    
           </div>
-          <div class="swiper-slide">
-            <div class="testimonial_container">
-                
-                <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" class="thumb">
-                  <p>"SprintOptimize reduced our compliance workload by 60%! Highly recommend."</p>
-                </div>
-                <div class="bottom">
-                  <cite><span class="testimonialAuthor">
-                    — Priya Mehta,
-                  </span><br> Compliance Director</cite>
-                </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" >
-            </div>    
-          </div>
-            <div class="swiper-slide">
-            <div class="testimonial_container">
-                
-                <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.webp" alt="" class="thumb">
-                  <p>"Audit preparation used to take weeks. Now, it’s done in days!"</p>
-                </div>
-                <div class="bottom">
-                  <cite><span class="testimonialAuthor">
-                    — Rahul Desai,
-                  </span><br> Risk Consultant</cite>
-                </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/vicky-hladynets-C8Ta0gwPbQg-unsplash.webp" alt="" >
-            </div>    
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial_container">
-                
-                <div class="top">
-                  <img src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" class="thumb">
-                  <p>"Seamless integration with our security tools made compliance effortless."</p>
-                </div>
-                <div class="bottom">
-                  <cite><span class="testimonialAuthor">
-                    — Amanda Roberts,
-                  </span><br> IT Security Lead</cite>
-                </div>
-                <img class="background" src="/wp-content/themes/sprintoptimize/assets/images/testimonials/jake-nackos-IF9TK5Uy-KI-unsplash.webp" alt="" >
-            </div>    
-          </div>
+          <?php endwhile; wp_reset_postdata();?>
         </div>
-        
-        <!-- <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div> -->
-      </div>
-      <div class="paginationContainer">
-        <div class="swiper-pagination"></div>
+        <div class="paginationContainer">
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
 
  <?php
   return ob_get_clean();
+  endif;
 }
 
 add_shortcode('testimonials', 'sprintoptimize_testimonials');
@@ -327,3 +270,75 @@ function enqueue_custom_scripts() {
   wp_enqueue_script('custom-slider-init', get_template_directory_uri() . '/assets/js/custom-slider.js', [], null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+
+// custom post type for handling testimonial data
+
+function create_testimonials_cpt() {
+  $labels = array(
+      'name'               => 'Testimonials',
+      'singular_name'      => 'Testimonial',
+      'menu_name'          => 'Testimonials',
+      'name_admin_bar'     => 'Testimonial',
+      'add_new'            => 'Add New',
+      'add_new_item'       => 'Add New Testimonial',
+      'new_item'           => 'New Testimonial',
+      'edit_item'          => 'Edit Testimonial',
+      'view_item'          => 'View Testimonial',
+      'all_items'          => 'All Testimonials',
+      'search_items'       => 'Search Testimonials',
+      'not_found'          => 'No testimonials found',
+      'not_found_in_trash' => 'No testimonials found in Trash'
+  );
+
+  $args = array(
+      'labels'             => $labels,
+      'public'             => true,
+      'has_archive'        => true,
+      'menu_icon'          => 'dashicons-testimonial',
+      'supports'           => array('title', 'editor', 'thumbnail'),
+      'show_in_rest'       => true,
+  );
+
+  register_post_type('testimonial', $args);
+}
+add_action('init', 'create_testimonials_cpt');
+
+function add_testimonial_meta_boxes() {
+  add_meta_box(
+      'testimonial_details',  
+      'Testimonial Details',  
+      'testimonial_meta_callback',  
+      'testimonial',  
+      'normal',  
+      'high'  
+  );
+}
+add_action('add_meta_boxes', 'add_testimonial_meta_boxes');
+
+function testimonial_meta_callback($post) {
+  $testimonial_name = get_post_meta($post->ID, '_testimonial_name', true);
+  $testimonial_designation = get_post_meta($post->ID, '_testimonial_designation', true);
+
+  ?>
+  <p>
+      <label for="testimonial_name">Name:</label><br>
+      <input type="text" name="testimonial_name" id="testimonial_name" value="<?php echo esc_attr($testimonial_name); ?>" style="width:100%;" />
+  </p>
+  <p>
+      <label for="testimonial_designation">Designation:</label><br>
+      <input type="text" name="testimonial_designation" id="testimonial_designation" value="<?php echo esc_attr($testimonial_designation); ?>" style="width:100%;" />
+  </p>
+  <?php
+}
+
+// Save custom fields
+function save_testimonial_meta($post_id) {
+  if (isset($_POST['testimonial_name'])) {
+      update_post_meta($post_id, '_testimonial_name', sanitize_text_field($_POST['testimonial_name']));
+  }
+  if (isset($_POST['testimonial_designation'])) {
+      update_post_meta($post_id, '_testimonial_designation', sanitize_text_field($_POST['testimonial_designation']));
+  }
+}
+add_action('save_post', 'save_testimonial_meta');
